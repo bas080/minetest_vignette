@@ -28,7 +28,7 @@ vignette.set = function (defs)
 end
 
 vignette.add = function (defs)
-  defs.darkness = defs.darkness + #vignette.huds[defs.player]
+  defs.darkness = math.max(defs.darkness + #vignette.huds[defs.player], 0)
   vignette.set(defs)
 end
 
