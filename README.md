@@ -7,15 +7,12 @@ Vignette also has an api for other mods to leverage.
 
 ## Api
 
-Exposes an api on the vignette namespace.
+> Exposes an api on the vignette namespace with functions `add` and `edit`.
+> These function can be used by other mods in the following manner.
 
-### vignette.render(<vignette>)
-
-The vignette properties can be updated using the render function. This function
-can be performed at any moment in time.
 
 ```lua
-vignette.render({
+vignette.set({
 
   -- player is a required field
   player = player,
@@ -25,4 +22,14 @@ vignette.render({
   darkness = 4
 
 });
+
+vignette.add({
+
+  -- same as the first example
+  player = player,
+
+  -- instead of setting it adds the darkness to the current player's screen
+  darkness = 1
+
+})
 ```
