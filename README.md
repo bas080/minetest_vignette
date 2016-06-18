@@ -28,7 +28,9 @@ vignette.add({
   -- same as the first example
   player = player,
 
-  -- instead of setting it adds the darkness to the current player's screen
+  -- instead of setting it adds the darkness to the current player's screen it
+  -- is allows to pass negative values also. If the darkness results in a
+  -- negative value it is defaulted to 0
   darkness = 1
 
 })
